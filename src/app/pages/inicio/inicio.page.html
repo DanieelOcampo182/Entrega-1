@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title color="primary" style="font-family:Verdana; color: black;">FarmaOks</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  
+  <ion-list>
+    <ion-item *ngfor="let c of componentes"
+            [routerlink]="c.redirecTo"
+            detail=true>
+            <ion-icon [name]="c.icon" 
+              slot="start" 
+              color="secundary"></ion-icon>         
+            {{ c.name }}
+    </ion-item>
+  </ion-list>
+  
+  
+  <ion-button routerLink="/alert">
+    Catalogo
+    </ion-button>
+
+  
+    <ion-textarea>¿Te gustaria recibir ofertas en tu correo electronico? <a routerLink="/formulario" >Registrate Aqui</a></ion-textarea>
+     
+</ion-content>
+<center>
+<ion-footer>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div>
+          <a href="https://www.instagram.com/"><ion-icon name="camera-outline"></ion-icon></a>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div>
+          <a href="https://www.facebook.com/"><ion-icon name="file-tray-outline"></ion-icon></a>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div>
+          <a href="https://www.google.com/"><ion-icon name="navigate-circle-outline"></ion-icon></a>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>
+
+</center>
